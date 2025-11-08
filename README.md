@@ -1,0 +1,1 @@
+update the 1516606713699.jpg in the index file or upload a file with the same name into the root folder with the index to complete your website. Also update the social media links, phone number, and the schedule URL which I got from my gmail calendar after setting up my schedule and copying the link.
