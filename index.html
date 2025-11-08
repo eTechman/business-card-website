@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evan Teitelbaum - Technical Support Manager</title>
+    <style>
+        /* Design System Variables */
+        :root {
+            /* Custom Portfolio Colors */
+            --color-dark-bg: #1a1d2e;
+            --color-dark-card: #22253a;
+            --color-accent-orange: #ff8c42;
+            --color-accent-copper: #d97640;
+            --gradient-orange-purple: linear-gradient(135deg, #ff8c42 0%, #b45fc7 100%);
+            --gradient-blue-pink: linear-gradient(135deg, #6e5bca 0%, #e85d9a 100%);
+            --color-white: rgba(255, 255, 255, 1);
+            --color-black: rgba(0, 0, 0, 1);
+            --color-cream-50: rgba(252, 252, 249, 1);
+            --color-cream-100: rgba(255, 255, 253, 1);
+            --color-gray-200: rgba(245, 245, 245, 1);
+            --color-gray-300: rgba(167, 169, 169, 1);
+            --color-gray-400: rgba(119, 124, 124, 1);
+            --color-slate-500: rgba(98, 108, 113, 1);
+            --color-brown-600: rgba(94, 82, 64, 1);
+            --color-charcoal-700: rgba(31, 33, 33, 1);
+            --color-charcoal-800: rgba(38, 40, 40, 1);
+            --color-slate-900: rgba(19, 52, 59, 1);
+            --color-teal-300: rgba(50, 184, 198, 1);
+            --color-teal-400: rgba(45, 166, 178, 1);
+            --color-teal-500: rgba(33, 128, 141, 1);
+            --color-teal-600: rgba(29, 116, 128, 1);
+            --color-teal-700: rgba(26, 104, 115, 1);
+            --color-brown-600-rgb: 94, 82, 64;
+            --color-teal-500-rgb: 33, 128, 141;
+            --color-slate-900-rgb: 19, 52, 59;
+            --color-slate-500-rgb: 98, 108, 113;
+            --color-background: var(--color-cream-50);
+            --color-surface: var(--color-cream-100);
+            --color-text: var(--color-slate-900);
+            --color-text-secondary: var(--color-slate-500);
+            --color-primary: var(--color-teal-500);
+            --color-primary-hover: var(--color-teal-600);
+            --color-primary-active: var(--color-teal-700);
+            --color-secondary: rgba(var(--color-brown-600-rgb), 0.12);
+            --color-secondary-hover: rgba(var(--color-brown-600-rgb), 0.2);
+            --color-border: rgba(var(--color-brown-600-rgb), 0.2);
+            --color-btn-primary-text: var(--color-cream-50);
+            --color-card-border: rgba(var(--color-brown-600-rgb), 0.12);
+            --font-family-base: 'FKGroteskNeue', 'Geist', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --font-size-base: 14px;
+            --font-size-lg: 16px;
+            --font-size-xl: 18px;
+            --font-size-2xl: 20px;
+            --font-size-3xl: 24px;
+            --font-size-4xl: 30px;
+            --font-weight-normal: 400;
+            --font-weight-medium: 500;
+            --font-weight-semibold: 550;
+            --font-weight-bold: 600;
+            --line-height-tight: 1.2;
+            --line-height-normal: 1.5;
+            --letter-spacing-tight: -0.01em;
+            --space-8: 8px;
+            --space-12: 12px;
+            --space-16: 16px;
+            --space-20: 20px;
+            --space-24: 24px;
+            --space-32: 32px;
+            --space-48: 48px;
+            --space-64: 64px;
+            --radius-base: 8px;
+            --radius-lg: 12px;
+            --radius-full: 9999px;
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.04), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
+            --duration-normal: 250ms;
+            --ease-standard: cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+
+
+        @font-face {
+            font-family: 'FKGroteskNeue';
+            src: url('https://r2cdn.perplexity.ai/fonts/FKGroteskNeue.woff2') format('woff2');
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: var(--font-size-base);
+        }
+
+        body {
+            font-family: var(--font-family-base);
+            background-color: var(--color-dark-bg);
+            color: var(--color-white);
+            line-height: var(--line-height-normal);
+            -webkit-font-smoothing: antialiased;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Main Container */
+        .portfolio-container {
+            width: 90%;
+            max-width: 600px;
+            background-color: var(--color-dark-card);
+            border-radius: var(--radius-lg);
+            padding: var(--space-48);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            position: relative;
+            display: flex;
+            flex-direction: column;              
+            align-items: center;
+	    
+        }
+
+        /* Profile Section */
+        <!-- backup .profile-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: var(--space-48);
+        } -->
+
+	.profile-header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: var(--space-48);
+        }
+
+        <!-- backup .profile-photo {
+            width: 80px;
+            height: 80px;
+            border-radius: var(--radius-full);
+            background: linear-gradient(135deg, var(--color-accent-orange), var(--color-accent-copper));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            font-weight: var(--font-weight-bold);
+            color: var(--color-white);
+        } -->
+
+  	.profile-photo {
+            width: 80px;
+            height: 80px;
+            border-radius: var(--radius-full);
+            align-items: center;
+            justify-content: center;
+            color: var(--color-white);
+	    padding-bottom: 5%;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: var(--space-12);
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-base);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-white);
+            text-decoration: none;
+            transition: all var(--duration-normal) var(--ease-standard);
+            font-size: 18px;
+        }
+
+        .social-icon:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        /* Main Content */
+        .main-content {
+            text-align: center;
+            margin-bottom: var(--space-48);
+        }
+
+        .title-label {
+            font-size: 12px;
+            font-weight: var(--font-weight-semibold);
+            color: var(--color-accent-orange);
+            letter-spacing: 2px;
+            margin-bottom: var(--space-16);
+            text-transform: uppercase;
+        }
+
+        .main-name {
+            font-size: 42px;
+            font-weight: var(--font-weight-bold);
+            color: var(--color-white);
+            margin-bottom: var(--space-24);
+            line-height: var(--line-height-tight);
+            letter-spacing: var(--letter-spacing-tight);
+        }
+
+        .bio-text {
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        /* CTA Buttons */
+        .cta-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-16);
+            margin-bottom: var(--space-32);
+        }
+
+        .gradient-btn {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: var(--space-20) var(--space-32);
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: var(--font-weight-semibold);
+            color: var(--color-white);
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: all var(--duration-normal) var(--ease-standard);
+        }
+
+        .gradient-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn-orange-purple {
+            background: var(--gradient-orange-purple);
+        }
+
+        .btn-blue-pink {
+            background: var(--gradient-blue-pink);
+        }
+
+        .btn-icon {
+            font-size: 20px;
+        }
+
+        /* Footer */
+        .portfolio-footer {
+            text-align: center;
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        /* Hero Section */
+
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .portfolio-container {
+                width: 95%;
+                padding: var(--space-32);
+            }
+
+            .profile-header {
+                flex-direction: column;
+                align-items: center;
+                gap: var(--space-24);
+
+            }
+
+            .main-name {
+                font-size: 32px;
+            }
+
+            .bio-text {
+                font-size: 14px;
+            }
+
+            .gradient-btn {
+                font-size: 16px;
+                padding: var(--space-16) var(--space-24);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="portfolio-container">
+        <!-- Profile Header with Photo and Social Icons -->
+<div class="profile-photo" aria-label="Profile photo" style="display: flex; justify-content: center; align-items: center; height: 150px;">
+                <img src="1516606713699.jpg" alt="Evan Teitelbaum's Profile Pic" style="width:120px; height:120px; border-radius:50%;">
+<!-- ET -->
+            </div>
+        <div class="profile-header">
+            
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/evan-teitelbaum" target="_blank" class="social-icon" aria-label="LinkedIn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                </a>
+                <a href="https://www.instagram.com/evanteitelbaum/" target="_blank" class="social-icon" aria-label="Instagram">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                </a>
+		<a href="https://steamcommunity.com/profiles/76561197989777465/" target="_blank" class="social-icon" aria-label="Steam">
+    		<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+        	<path d="M.329 10.333A8.01 8.01 0 0 0 7.99 16C12.414 16 16 12.418 16 8s-3.586-8-8.009-8A8.006 8.006 0 0 0 0 7.468l.003.006 4.304 1.769A2.2 2.2 0 0 1 5.62 8.88l1.96-2.844-.001-.04a3.046 3.046 0 0 1 3.042-3.043 3.046 3.046 0 0 1 3.042 3.043 3.047 3.047 0 0 1-3.111 3.044l-2.804 2a2.223 2.223 0 0 1-3.075 2.11 2.22 2.22 0 0 1-1.312-1.568L.33 10.333Z"/>
+        	<path d="M4.868 12.683a1.715 1.715 0 0 0 1.318-3.165 1.7 1.7 0 0 0-1.263-.02l1.023.424a1.261 1.261 0 1 1-.97 2.33l-.99-.41a1.7 1.7 0 0 0 .882.84Zm3.726-6.687a2.03 2.03 0 0 0 2.027 2.029 2.03 2.03 0 0 0 2.027-2.029 2.03 2.03 0 0 0-2.027-2.027 2.03 2.03 0 0 0-2.027 2.027m2.03-1.527a1.524 1.524 0 1 1-.002 3.048 1.524 1.524 0 0 1 .002-3.048"/>
+    		</svg>
+		</a>
+
+                <a href="mailto:evanteitelbaum@gmail.com" class="social-icon" aria-label="Email">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="title-label">TECHNICAL SUPPORT MANAGER</div>
+            <h1 class="main-name">Evan Teitelbaum</h1>
+            <p class="bio-text">
+                Experienced technical support manager with 10+ years in software support, team leadership, and process improvement. Based in the Pacific Northwest, skilled in troubleshooting, mentoring, and driving customer satisfaction across enterprise platforms.
+            </p>
+        </div>
+
+        <!-- CTA Buttons -->
+        <div class="cta-buttons">
+            <a href="tel:949-433-8618" class="gradient-btn btn-orange-purple">
+                <span>Phone</span>
+                <span class="btn-icon">📞</span>
+            </a>
+            <a href="https://calendar.app.google/tMtH9W3JibTpgapH8" target="_blank" class="gradient-btn btn-blue-pink">
+                <span>Book A Consultant</span>
+                <span class="btn-icon">📅</span>
+            </a>
+        </div>
+
+        <!-- Footer -->
+            </div>
+</body>
+</html>
